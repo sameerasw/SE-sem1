@@ -124,7 +124,7 @@ public class Main {
         Double[] productPriceOg = {29.99 , 9.99};
 
         //Verification of items and prices
-        for (int i = 0 ; i <= 1 ; i++){
+        for (int i = 0 ; i < 2 ; i++){
             String productCartName = products.get(i).findElement(By.className("inventory_item_name")).getText();
             Double productCartPrice = Double.parseDouble(products.get(i).findElement(By.className("inventory_item_price")).getText().replace("$", ""));
             Assert.assertEquals(productCartName,productNamesOg[i]);
