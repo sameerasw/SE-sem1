@@ -9,6 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
@@ -118,7 +119,7 @@ public class Main {
         cart.click();
 
         //Listing cart item
-        List<WebElement> products = driver.findElements(By.className("cart-item"));
+        List<WebElement> products = driver.findElements(By.className("cart_item"));
 
         String[] productNamesOg = {"Sauce Labs Backpack","Sauce Labs Bike Light"};
         Double[] productPriceOg = {29.99 , 9.99};
@@ -133,30 +134,52 @@ public class Main {
         //Printing the verification
         System.out.println("Verified the product names and prices in the cart.");
 
-        /*
-        WebElement itemCart1Name = driver.findElement(By.id("item_4_title_link"));
-        String itemCart1NameText = itemCart1Name.getText();
-        String itemCat1NameOg = "Sauce Labs Backpack";
-        Assert.assertEquals(itemCat1NameOg,itemCart1NameText);
-        WebElement itemCart2Name = driver.findElement(By.id("item_0_title_link"));
-        String itemCart2NameText = itemCart2Name.getText();
-        String itemCat2NameOg = "Sauce Labs Bike Light";
-        Assert.assertEquals(itemCat2NameOg,itemCart2NameText);
+        //Click checkout
+        WebElement checkoutButton = driver.findElement(By.id("checkout"));
+        checkoutButton.click();
 
-        WebElement itemCart1Price = driver.findElement(By.className("inventory_item_price"));
-        String itemCart1PriceStr = itemCart1Price.getText().replace("$","");
-        double itemCart1PriceDou = Double.parseDouble(itemCart1PriceStr);
-        double itemCart1PriceOg = 29.99;
-        Assert.assertEquals(itemCart1PriceOg,itemCart1PriceDou);
-        WebElement itemCart2Price = driver.findElement(By.className("inventory_item_price"));
-        String itemCart2PriceStr = itemCart2Price.getText().replace("$","");
-        double itemCart2PriceDou = Double.parseDouble(itemCart2PriceStr);
-        double itemCart2PriceOg = 9.99;
-        Assert.assertEquals(itemCart2PriceOg,itemCart2PriceDou);
+        //finding the first-name element and entering data
+        WebElement firstname = driver.findElement(By.xpath("//input[@data-test='firstName']"));
+        firstname.sendKeys("Swag");
+
+        //finding the password field and entering data
+        WebElement lastname = driver.findElement(By.xpath("//input[@data-test='lastName']"));
+        lastname.sendKeys("Labs");
+
+        //finding the password field and entering data
+        WebElement zipCode = driver.findElement(By.xpath("//input[@data-test='postalCode']"));
+        zipCode.sendKeys("123");
+
+        //finding the login button and clicking it
+        WebElement continueButtonCheckout = driver.findElement(By.xpath("//input[@data-test='continue']"));
+        continueButtonCheckout.click();
+
+        //Verifying total
+        Double sum = 0.00;
+        for(int i=0; i<2; i++) {
+            sum = sum + productPriceOg[i];
+        }
+        WebElement totalPrice = driver.findElement(By.className("summary_subtotal_label"));
+        String priceTotalStr = totalPrice.getText().replace("Item total: $","");
+        double totalConverted = Double.parseDouble(priceTotalStr);
+        Assert.assertEquals(totalConverted,sum);
         //Printing the verification
-        System.out.println("Verified the product names and prices");
-        */
+        System.out.println("Verified the total price");
 
+        //Clicking the finish button
+        WebElement finishButton = driver.findElement(By.id("finish"));
+        finishButton.click();
 
+        //Verifying thank you text
+        WebElement thankYou = driver.findElement(By.className("complete-header"));
+        //Printing the verification
+        System.out.println("Verified the thank you text is visible.");
+
+        //gets the finish URL
+        String finishUrlGiven = "https://www.saucedemo.com/checkout-complete.html";
+        String finishUrl = driver.getCurrentUrl();
+        Assert.assertEquals(finishUrlGiven,finishUrl);
+        //Printing the verification
+        System.out.println("Verified the the test is finished with the URL!");
     }
 }
