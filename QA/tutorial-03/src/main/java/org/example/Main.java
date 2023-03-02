@@ -9,7 +9,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import java.util.List;
-import java.util.Scanner;
 
 public class Main {
 
@@ -108,7 +107,7 @@ public class Main {
         WebElement continueButton = driver.findElement(By.id("continue-shopping"));
         continueButton.click();
 
-        //Add any 2 items to cart
+        //Add 2 items to cart
         WebElement addToCart1 = driver.findElement(By.name("add-to-cart-sauce-labs-backpack"));
         addToCart1.click();
         WebElement addToCart2 = driver.findElement(By.name("add-to-cart-sauce-labs-bike-light"));
@@ -142,23 +141,24 @@ public class Main {
         WebElement firstname = driver.findElement(By.xpath("//input[@data-test='firstName']"));
         firstname.sendKeys("Swag");
 
-        //finding the password field and entering data
+        //finding the last-name field and entering data
         WebElement lastname = driver.findElement(By.xpath("//input[@data-test='lastName']"));
         lastname.sendKeys("Labs");
 
-        //finding the password field and entering data
+        //finding the zip-code field and entering data
         WebElement zipCode = driver.findElement(By.xpath("//input[@data-test='postalCode']"));
         zipCode.sendKeys("123");
 
-        //finding the login button and clicking it
+        //finding the continue button and clicking it
         WebElement continueButtonCheckout = driver.findElement(By.xpath("//input[@data-test='continue']"));
         continueButtonCheckout.click();
 
-        //Verifying total
+        //Calculating the total
         Double sum = 0.00;
         for(int i=0; i<2; i++) {
             sum = sum + productPriceOg[i];
         }
+        //Verifying total
         WebElement totalPrice = driver.findElement(By.className("summary_subtotal_label"));
         String priceTotalStr = totalPrice.getText().replace("Item total: $","");
         double totalConverted = Double.parseDouble(priceTotalStr);
