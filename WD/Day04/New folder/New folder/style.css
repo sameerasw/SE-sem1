@@ -1,0 +1,99 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Itim', cursive;
+font-family: 'Poppins', sans-serif;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+
+
+/*=== navigation bar====*/
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    margin: 1rem auto;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.menu ul{
+    list-style: none;
+    display: flex;
+}
+.menu ul li{
+    margin: 0 10px;
+}
+.logo{
+    width: 5%;
+    height: 5%;
+}
+
+.logBtn{
+    margin-top:2vh ;
+    border: none;
+    font-weight: 700;
+    background-color: transparent;
+    cursor: pointer;
+}
+.logBtn i{
+    font-weight: 700;
+}
+
+.mainSec{
+    margin: 20% auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.sec1 a{
+    color: rgb(79, 79, 79);
+    border: solid 1px rgb(119, 117, 117);
+    border-radius: 50px;
+    padding: 10px;
+}
+.sec1 a span{
+    color: rgb(10, 8, 117);
+    font-weight: 800;
+}
+
+.headerText h1{
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.btnStart{
+    background-color: rgb(167, 10, 167);
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.btnLearn{
+    border: none;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: transparent;
+    text-transform: capitalize;
+}
+.btnrow{
+    margin-top: 1rem;
+}

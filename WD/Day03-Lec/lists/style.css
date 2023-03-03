@@ -1,0 +1,15 @@
+li.a {
+    list-style-type: circle;
+}
+
+li.b {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+ul {
+    list-style-image: url('icons8-filled-circle-12.png');
+}
