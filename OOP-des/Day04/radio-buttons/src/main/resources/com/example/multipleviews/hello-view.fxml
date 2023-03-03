@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.multipleviews.HelloController">
    <children>
-      <Button fx:id="addStudent" layoutX="407.0" layoutY="125.0" mnemonicParsing="false" onAction="#addStudentClick" prefHeight="25.0" prefWidth="167.0" text="Student Details" />
+      <Button fx:id="addStudent" layoutX="407.0" layoutY="125.0" mnemonicParsing="false" onAction="#addStudentClick" prefHeight="25.0" prefWidth="167.0" text="Add Student Details" />
       <Button fx:id="viewStudents" layoutX="407.0" layoutY="168.0" mnemonicParsing="false" onAction="#viewStudentsClick" prefHeight="25.0" prefWidth="167.0" text="View Students Details" />
       <Button fx:id="quit" layoutX="407.0" layoutY="209.0" mnemonicParsing="false" onAction="#quitClick" prefHeight="25.0" prefWidth="167.0" text="Quit" />
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-3.0" layoutY="14.0" prefHeight="39.0" prefWidth="606.0" text="Student Information System" textAlignment="CENTER">

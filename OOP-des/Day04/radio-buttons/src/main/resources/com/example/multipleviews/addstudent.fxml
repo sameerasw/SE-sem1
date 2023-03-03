@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.multipleviews.HelloController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="153.0" layoutY="45.0" text="Add Student Details">
@@ -32,7 +31,7 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Button layoutX="354.0" layoutY="337.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" text="Back" />
-      <Button layoutX="463.0" layoutY="337.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" text="Add Details" />
+      <Button fx:id="addStudentBack" layoutX="354.0" layoutY="337.0" mnemonicParsing="false" onAction="#addStudentBackClick" prefHeight="25.0" prefWidth="94.0" text="Back" />
+      <Button fx:id="addStudentAdd" layoutX="463.0" layoutY="337.0" mnemonicParsing="false" onAction="#addStudentAddClick" prefHeight="25.0" prefWidth="94.0" text="Add Details" />
    </children>
 </AnchorPane>
