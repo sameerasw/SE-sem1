@@ -1,4 +1,4 @@
-package com.example.radiobuttons;
+package com.example.multipleviews;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

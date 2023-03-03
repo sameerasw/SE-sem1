@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.radiobuttons.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.multipleviews.HelloController">
    <children>
       <Button fx:id="addStudent" layoutX="407.0" layoutY="125.0" mnemonicParsing="false" onAction="#addStudentClick" prefHeight="25.0" prefWidth="167.0" text="Student Details" />
       <Button fx:id="viewStudents" layoutX="407.0" layoutY="168.0" mnemonicParsing="false" onAction="#viewStudentsClick" prefHeight="25.0" prefWidth="167.0" text="View Students Details" />
