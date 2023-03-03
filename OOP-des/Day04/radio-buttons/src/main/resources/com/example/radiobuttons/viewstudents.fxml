@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.radiobuttons.HelloController">
-
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="148.0" layoutY="55.0" text="View Student Details">
+         <font>
+            <Font name="Arial Bold" size="31.0" />
+         </font>
+      </Label>
+      <TableView layoutX="113.0" layoutY="120.0" prefHeight="200.0" prefWidth="375.0">
+        <columns>
+          <TableColumn prefWidth="129.0" text="Name" />
+          <TableColumn prefWidth="100.0" text="Mobile" />
+            <TableColumn prefWidth="145.0" text="Email" />
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>
