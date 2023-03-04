@@ -16,7 +16,7 @@ while turns != 0:
             print(' _ ', end='')
     turns -= 1
     print("\n You've got ",turns," left.")
-    if guesses == secret: #need some improvement
+    if guesses == secret:                                    #need some improvement
         print("\n You guessed the word!")
         break
 if turns == 0 and guesses != secret:
