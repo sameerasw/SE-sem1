@@ -1,6 +1,10 @@
-salary = 0.0
-while salary >= 0 :
-    salary = float(input())
-    if salary >= 0 :
-        total = total + salary
-        count = count + 1
+response = str(input("Do you like Python? (yes/no):"))
+response = response.lower() 
+if response=="yes":
+    reply = "You are on the right course!"
+elif response=="no":
+    reply = "You might change your mind."
+else:
+    reply = "I did not understand."
+
+print(reply)

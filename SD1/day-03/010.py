@@ -1,9 +1,5 @@
-import random
-
-result = random.randint(0,1)
-if result==1:
-    coin = "Heads"
-else:
-    coin = "Tails"
-
-print(coin)
+x = 10 
+if not x > 10: 
+    print("not returned True") 
+else: 
+    print("not returned False") 

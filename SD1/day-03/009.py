@@ -1,10 +1,3 @@
-response = str(input("Do you like Python? (yes/no):"))
-response = response.lower() 
-if response=="yes":
-    reply = "You are on the right course!"
-elif response=="no":
-    reply = "You might change your mind."
-else:
-    reply = "I did not understand."
-
-print(reply)
+m = int(input('Give me number between 1 and 10: ')) 
+if m >= 1 and m <= 10:
+    print('Well done! You gave me: ', m)
