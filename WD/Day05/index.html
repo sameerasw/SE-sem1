@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Form</title>
+        <link rel="stylesheet" href="./css/style.css"/>
+    </head>
+    <body>
+        <form>
+            <fieldset class="main">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password">
+            </fieldset>
+            <fieldset>
+                <legend>Level</legend>
+                <input type="radio" name="grad" id="udg" value="udg" checked>
+                <label for="udg">Under Graduate</label>
+                <input type="radio" name="grad" id="pdg" value="pdg">
+                <label for="pdg">Post Graduate</label>
+            </fieldset>
+            <fieldset>
+                <legend>Comments</legend>
+                <textarea name="comments" id="comments" cols="30" rows="3" placeholder="Enter your comments"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Course</legend>
+                <select name="Course" id="course">
+                    <option value="se" selected>Software Engineering</option>
+                    <option value="cs">Computer Science</option>
+                    <option value="it">Information Technology</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <div>
+                    <input type="checkbox" name="agree" id="agree">
+                    <label for="agree">I agree to the terms</label><br><br>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+            </fieldset>
+            </fieldset>
+        </form>
+    </body>
+</html>
