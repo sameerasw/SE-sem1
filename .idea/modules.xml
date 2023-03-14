@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/OOP-des/Day02-001/Day02-001.iml" filepath="$PROJECT_DIR$/OOP-des/Day02-001/Day02-001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP-des/Day2-002/Day2-002.iml" filepath="$PROJECT_DIR$/OOP-des/Day2-002/Day2-002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/IIT-stuff.iml" filepath="$PROJECT_DIR$/.idea/IIT-stuff.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP-des/day02-003/day02-003.iml" filepath="$PROJECT_DIR$/OOP-des/day02-003/day02-003.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP/oop-001/oop-001.iml" filepath="$PROJECT_DIR$/OOP/oop-001/oop-001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP-des/Day05/push-notification/push-notification.iml" filepath="$PROJECT_DIR$/OOP-des/Day05/push-notification/push-notification.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP-des/Day04/radio-buttons/radio-buttons.iml" filepath="$PROJECT_DIR$/OOP-des/Day04/radio-buttons/radio-buttons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP-des/day03/tut-001/tut-001.iml" filepath="$PROJECT_DIR$/OOP-des/day03/tut-001/tut-001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QA/tutorial-03/tutorial-03.iml" filepath="$PROJECT_DIR$/QA/tutorial-03/tutorial-03.iml" />
+    </modules>
+  </component>
+</project>
