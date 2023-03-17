@@ -1,0 +1,24 @@
+h1 {
+    color: #333;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:gray;
+    color: black;
+}
+
+button:active {
+    background-color:red;
+    color: #fff;
+}
