@@ -7,7 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-
+import javafx.scene.web.WebView;
 import java.io.IOException;
 
 public class HelloController {
@@ -130,6 +130,25 @@ public class HelloController {
 
     @FXML
     void wdClick(ActionEvent event) {
+
+    }
+
+    @FXML
+    private Button backWeb;
+
+    @FXML
+    private Button exitWeb;
+
+    @FXML
+    private WebView webview;
+
+    @FXML
+    void backWebClick(ActionEvent event) {
+
+    }
+
+    @FXML
+    void exitWebClick(ActionEvent event) {
 
     }
 

@@ -18,7 +18,7 @@
             <children>
                 <HBox alignment="CENTER" prefHeight="50.0" prefWidth="866.0">
                     <children>
-                        <Button fx:id="backWeb" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#backWeb" prefHeight="85.0" prefWidth="96.0" style="-fx-background-color: #333333; -fx-border-color: #555555; -fx-border-width: 5; -fx-background-radius: 25; -fx-border-radius: 25;" text="←" textFill="WHITE">
+                        <Button fx:id="backWeb" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#backWebClick" prefHeight="85.0" prefWidth="96.0" style="-fx-background-color: #333333; -fx-border-color: #555555; -fx-border-width: 5; -fx-background-radius: 25; -fx-border-radius: 25;" text="←" textFill="WHITE">
                             <font>
                                 <Font size="22.0" />
                             </font>
@@ -28,7 +28,7 @@
                                 <Font name="System Bold" size="30.0" />
                             </font>
                         </Text>
-                        <Button fx:id="exitUow" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#exitUowClick" prefHeight="85.0" prefWidth="110.0" style="-fx-background-color: #333333; -fx-border-color: #555555; -fx-border-width: 5; -fx-background-radius: 25; -fx-border-radius: 25;" text="Exit" textFill="WHITE">
+                        <Button fx:id="exitWeb" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#exitWebClick" prefHeight="85.0" prefWidth="110.0" style="-fx-background-color: #333333; -fx-border-color: #555555; -fx-border-width: 5; -fx-background-radius: 25; -fx-border-radius: 25;" text="Exit" textFill="WHITE">
                             <font>
                                 <Font size="22.0" />
                             </font>
