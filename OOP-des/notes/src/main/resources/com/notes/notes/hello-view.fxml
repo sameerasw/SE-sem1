@@ -30,7 +30,7 @@
             <graphic>
                <ImageView fitHeight="200.0" fitWidth="200.0" opacity="0.51">
                   <image>
-                     <Image url="@../../../../../../../../../../Downloads/uow.png" />
+                     <Image url="@../../../img/uow.png" />
                   </image>
                </ImageView>
             </graphic>
@@ -45,7 +45,7 @@
             <graphic>
                <ImageView fitHeight="200.0" fitWidth="200.0" opacity="0.51">
                   <image>
-                     <Image url="@../../../../../../../../../../Downloads/iit-logo.png" />
+                     <Image url="@../../../img/iit-logo.png" />
                   </image>
                </ImageView>
             </graphic>
