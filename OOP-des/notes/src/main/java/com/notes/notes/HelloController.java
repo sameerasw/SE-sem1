@@ -3,14 +3,18 @@ package com.notes.notes;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.web.WebEngine;
 import javafx.stage.Stage;
 import javafx.scene.web.WebView;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class HelloController {
+public class HelloController implements Initializable {
 
     @FXML
     private Button iit;
@@ -119,7 +123,16 @@ public class HelloController {
     }
 
     @FXML
-    void oopdClick(ActionEvent event) {
+    void oopdClick(ActionEvent event) throws IOException {
+        Stage stage = (Stage) backIit.getScene().getWindow();
+        stage.close();
+        Stage uow = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("web-view.fxml"));
+        uow.setTitle("Study Materials Portal");
+        uow.setScene(new Scene(root, 1280, 720));
+        uow.show();
+        URL url = new URL("https://www.google.com/");
+        initialize(url, null);
 
     }
 
@@ -152,4 +165,9 @@ public class HelloController {
 
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        WebEngine webEngine = webview.getEngine();
+        webEngine.load("https://www.google.com/");
+    }
 }
