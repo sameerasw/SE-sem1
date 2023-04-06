@@ -17,16 +17,5 @@
         <module name="radio-buttons" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Day02-001" target="18" />
-      <module name="day02-003" target="18" />
-      <module name="Day2-002" target="18" />
-      <module name="notes" target="18" />
-      <module name="oop-001" target="18" />
-      <module name="push-notification" target="18" />
-      <module name="radio-buttons" target="18" />
-      <module name="tut-001" target="18" />
-      <module name="tutorial-03" target="18" />
-    </bytecodeTargetLevel>
   </component>
 </project>
