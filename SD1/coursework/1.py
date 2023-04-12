@@ -3,18 +3,16 @@ valid_marks = [0, 20, 40, 60, 80, 100, 120]
 
 
 def input_prompt(level):
-    global level_input
     prompt = "Please enter your credits at " + level + ":"
     level_input = input(prompt)
-    validate(level_input)
+    validation = validate(level_input)
     if validation != "validated":
         input_prompt(level)
     else:
-        return(level_input)
+        return(int(level_input))
 
 
 def validate(marks):
-    global validation
     try:
         int(marks)
         if 120 < int(marks) > 0:
@@ -57,12 +55,9 @@ def control():
     return(continue_prog)
 
 while continue_prog == True:
-    input_prompt("pass")
-    pass_marks = int(level_input)
-    input_prompt("defer")
-    defer_marks = int(level_input)
-    input_prompt("fail")
-    fail_marks = int(level_input)
+    pass_marks = input_prompt("pass")
+    defer_marks = input_prompt("defer")
+    fail_marks = input_prompt("fail")
 
     outcome(pass_marks, defer_marks, fail_marks)
 
