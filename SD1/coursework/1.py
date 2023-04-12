@@ -1,6 +1,7 @@
 continue_prog = True
 valid_marks = [0, 20, 40, 60, 80, 100, 120]
 
+
 def input_prompt(level):
     global level_input
     prompt = "Please enter your credits at " + level + ":"
@@ -10,6 +11,7 @@ def input_prompt(level):
         input_prompt(level)
     else:
         return(level_input)
+
 
 def validate(marks):
     global validation
@@ -26,7 +28,8 @@ def validate(marks):
     print(validation)
     return(validation)
 
-def outcome(mark1,mark2,mark3):
+
+def outcome(mark1, mark2, mark3):
     if mark1 + mark2 + mark3 != 120:
         outcome = "Total incorrect."
     else:
@@ -40,18 +43,18 @@ def outcome(mark1,mark2,mark3):
             outcome = "Progress"
     print(outcome)
 
+
 def control():
-    global continue_prog
     print("Would you like to enter another set of data?")
-    control = input("Enter 'y' for yes or 'q' to quit and view results:").lower()
-    while control != "y" or "q":
-        if control == "y":
-            continue_prog = True
-            return
-        else:
-            continue_prog = False
-            return
-    
+    control_input = input("Enter 'y' for yes or 'q' to quit and view results:").lower()
+    while control_input != "y" and control_input != "q":
+        print("Invalid input.")
+        control_input = input("Enter 'y' for yes or 'q' to quit and view results:").lower()
+    if control_input == "y":
+        continue_prog = True
+    elif control_input == "q":
+        continue_prog = False
+    return(continue_prog)
 
 while continue_prog == True:
     input_prompt("pass")
@@ -61,6 +64,6 @@ while continue_prog == True:
     input_prompt("fail")
     fail_marks = int(level_input)
 
-    outcome(pass_marks,defer_marks,fail_marks)
+    outcome(pass_marks, defer_marks, fail_marks)
 
-    control()
+    continue_prog = control()
