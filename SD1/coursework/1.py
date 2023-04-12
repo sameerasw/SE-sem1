@@ -50,7 +50,7 @@ def control():
         control_input = input("Enter 'y' for yes or 'q' to quit and view results:").lower()
     if control_input == "y":
         continue_prog = True
-    elif control_input == "q":
+    else:
         continue_prog = False
     return(continue_prog)
 
