@@ -6,10 +6,11 @@ def input_prompt(level):
     prompt = "Please enter your credits at " + level + ":"
     level_input = input(prompt)
     validation = validate(level_input)
-    if validation != "validated":
-        input_prompt(level)
-    else:
-        return(int(level_input))
+    while validation != "validated":
+        print(validation)
+        level_input = input(prompt)
+        validation = validate(level_input)
+    return(int(level_input))
 
 
 def validate(marks):
@@ -23,7 +24,6 @@ def validate(marks):
             validation = "validated"
     except:
         validation = "Integer required"
-    print(validation)
     return(validation)
 
 
