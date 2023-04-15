@@ -87,7 +87,7 @@ def history_print(outcome_count):
     print("---------------------------------------------------------------\n")
 
 def result_list(list,outcome_str,pass_marks, defer_marks, fail_marks):
-    '''Saves the input - output pairs in a list (Part 2)'''
+    '''Saves the input - output pairs in a list (Part 2).'''
     result = (outcome_str, " - ",pass_marks," ,",defer_marks," ,",fail_marks)
     list.append(result)
 
