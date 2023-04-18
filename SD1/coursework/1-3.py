@@ -6,7 +6,7 @@ valid_marks = [0, 20, 40, 60, 80, 100, 120]
 histogram = {'Progress': 0, 'Progress (module trailer)': 0,
              'Do not progress – module retriever': 0, 'Exclude': 0}
 outcome_count = 0
-results = []
+file_path = 'SD1\\coursework\\test.txt'
 
 
 def input_prompt(level):
@@ -90,19 +90,19 @@ def history_print(outcome_count):
     print("---------------------------------------------------------------\n")
 
 
-def result_list(list, outcome_str, pass_marks, defer_marks, fail_marks):
+def result_list(outcome_str, pass_marks, defer_marks, fail_marks):
     '''Saves the input to file- output pairs in a list (Part 3).'''
     result = (outcome_str, " - ", pass_marks,
               " ,", defer_marks, " ,", fail_marks)
-    with open('SD1\\coursework\\test.txt', 'a') as f:
+    with open(file_path, 'a') as f:
         for items in result:
             f.write(str(items))
         f.write("\n")
 
 
 # This is the main execution, depends on the control function.
-if os.path.exists ('SD1\\coursework\\test.txt'):
-    os.remove('SD1\\coursework\\test.txt')
+if os.path.exists (file_path):
+    os.remove(file_path)
 
 while continue_prog == True:
     pass_marks = input_prompt("pass")
@@ -112,7 +112,7 @@ while continue_prog == True:
     outcome_str = outcome(pass_marks, defer_marks, fail_marks)
     print("\n", outcome_str, "\n")
     history(outcome_str)
-    result_list(results, outcome_str, pass_marks, defer_marks, fail_marks)
+    result_list(outcome_str, pass_marks, defer_marks, fail_marks)
 
     continue_prog = control()
 
@@ -121,5 +121,5 @@ while continue_prog == True:
 history_print(outcome_count)
 
 # printing results from file
-with open('SD1\\coursework\\test.txt', 'r') as f:
+with open(file_path, 'r') as f:
     print(f.read())
