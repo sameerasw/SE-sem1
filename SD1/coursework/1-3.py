@@ -101,7 +101,7 @@ def result_list(outcome_str, pass_marks, defer_marks, fail_marks):
 
 
 # This is the main execution, depends on the control function.
-if os.path.exists (file_path):
+if os.path.exists(file_path):
     os.remove(file_path)
 
 while continue_prog == True:
