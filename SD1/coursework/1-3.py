@@ -1,7 +1,10 @@
+import os
+
 # variable declaration
 continue_prog = True
 valid_marks = [0, 20, 40, 60, 80, 100, 120]
-histogram = {'Progress': 0, 'Progress (module trailer)': 0,'Do not progress – module retriever': 0, 'Exclude': 0}
+histogram = {'Progress': 0, 'Progress (module trailer)': 0,
+             'Do not progress – module retriever': 0, 'Exclude': 0}
 outcome_count = 0
 results = []
 
@@ -86,12 +89,21 @@ def history_print(outcome_count):
     print(outcome_count, "outcomes in total.")
     print("---------------------------------------------------------------\n")
 
-def result_list(list,outcome_str,pass_marks, defer_marks, fail_marks):
-    '''Saves the input - output pairs in a list (Part 2).'''
-    result = (outcome_str, " - ",pass_marks," ,",defer_marks," ,",fail_marks)
-    list.append(result)
+
+def result_list(list, outcome_str, pass_marks, defer_marks, fail_marks):
+    '''Saves the input to file- output pairs in a list (Part 3).'''
+    result = (outcome_str, " - ", pass_marks,
+              " ,", defer_marks, " ,", fail_marks)
+    with open('SD1\\coursework\\test.txt', 'a') as f:
+        for items in result:
+            f.write(str(items))
+        f.write("\n")
+
 
 # This is the main execution, depends on the control function.
+if os.path.exists ('SD1\\coursework\\test.txt'):
+    os.remove('SD1\\coursework\\test.txt')
+
 while continue_prog == True:
     pass_marks = input_prompt("pass")
     defer_marks = input_prompt("defer")
@@ -100,16 +112,14 @@ while continue_prog == True:
     outcome_str = outcome(pass_marks, defer_marks, fail_marks)
     print("\n", outcome_str, "\n")
     history(outcome_str)
-    result_list(results,outcome_str,pass_marks, defer_marks, fail_marks)
+    result_list(results, outcome_str, pass_marks, defer_marks, fail_marks)
 
     continue_prog = control()
 
-#printing the outcome summary
+# printing the outcome summary
 
 history_print(outcome_count)
 
-#printing results from memory
-for items in results:
-    for text in items:
-        print(text,end="")
-    print()
+# printing results from file
+with open('SD1\\coursework\\test.txt', 'r') as f:
+    print(f.read())
