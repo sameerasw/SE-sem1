@@ -1,7 +1,8 @@
 # variable declaration
 continue_prog = True
 valid_marks = [0, 20, 40, 60, 80, 100, 120]
-histogram = {'Progress': 0, 'Progress (module trailer)': 0,'Do not progress – module retriever': 0, 'Exclude': 0}
+histogram = {'Progress': 0, 'Progress (module trailer)': 0,
+             'Do not progress – module retriever': 0, 'Exclude': 0}
 outcome_count = 0
 results = []
 
@@ -15,7 +16,7 @@ def input_prompt(level):
         print(validation)
         level_input = input(prompt)
         validation = validate(level_input)
-    return(int(level_input))
+    return (int(level_input))
 
 
 def validate(marks):
@@ -30,7 +31,7 @@ def validate(marks):
             validation = "validated"
     except:
         validation = "Integer required"
-    return(validation)
+    return (validation)
 
 
 def outcome(mark1, mark2, mark3):
@@ -46,7 +47,7 @@ def outcome(mark1, mark2, mark3):
             outcome = "Progress (module trailer)"
         else:
             outcome = "Progress"
-    return(outcome)
+    return (outcome)
 
 
 def control():
@@ -64,7 +65,7 @@ def control():
     else:
         continue_prog = False
         print()
-    return(continue_prog)
+    return (continue_prog)
 
 
 def history(outcome):
@@ -86,10 +87,13 @@ def history_print(outcome_count):
     print(outcome_count, "outcomes in total.")
     print("---------------------------------------------------------------\n")
 
-def result_list(list,outcome_str,pass_marks, defer_marks, fail_marks):
+
+def result_list(list, outcome_str, pass_marks, defer_marks, fail_marks):
     '''Saves the input - output pairs in a list (Part 2).'''
-    result = (outcome_str, " - ",pass_marks," ,",defer_marks," ,",fail_marks)
+    result = (outcome_str, " - ", pass_marks,
+              " ,", defer_marks, " ,", fail_marks)
     list.append(result)
+
 
 # This is the main execution, depends on the control function.
 while continue_prog == True:
@@ -100,16 +104,15 @@ while continue_prog == True:
     outcome_str = outcome(pass_marks, defer_marks, fail_marks)
     print("\n", outcome_str, "\n")
     history(outcome_str)
-    result_list(results,outcome_str,pass_marks, defer_marks, fail_marks)
+    result_list(results, outcome_str, pass_marks, defer_marks, fail_marks)
 
     continue_prog = control()
 
-#printing the outcome summary
-
+# printing the outcome summary
 history_print(outcome_count)
 
-#printing results from memory
+# printing results from memory
 for items in results:
     for text in items:
-        print(text,end="")
+        print(text, end="")
     print()
