@@ -30,10 +30,8 @@ def validate(marks):
     '''Gets the user input data from the input_prompt function and then return the result'''
     try:
         int(marks)
-        if 120 < int(marks) > 0:
+        if 120 < int(marks) > 0 or int(marks) not in valid_marks:
             validation = "Out of range."
-        elif int(marks) not in valid_marks:
-            validation = "Invalid marks"
         else:
             validation = "validated"
     except:
