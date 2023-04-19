@@ -1,3 +1,8 @@
+# I declare that my work contains no examples of misconduct, such as plagiarism, or collusion.
+# Any code taken from other sources is referenced within my code solution.
+# Student ID: 20223140 / w1986636
+# Date: 19.04.2023
+
 # variable declaration
 continue_prog = True
 valid_marks = [0, 20, 40, 60, 80, 100, 120]
@@ -88,13 +93,6 @@ def history_print(outcome_count):
     print("---------------------------------------------------------------\n")
 
 
-def result_list(list, outcome_str, pass_marks, defer_marks, fail_marks):
-    '''Saves the input - output pairs in a list (Part 2).'''
-    result = (outcome_str, " - ", pass_marks,
-              " ,", defer_marks, " ,", fail_marks)
-    list.append(result)
-
-
 # This is the main execution, depends on the control function.
 while continue_prog == True:
     pass_marks = input_prompt("pass")
@@ -106,7 +104,6 @@ while continue_prog == True:
 
     if outcome_str != "Total incorrect.":
         history(outcome_str)
-        result_list(results, outcome_str, pass_marks, defer_marks, fail_marks)
 
     continue_prog = control()
 

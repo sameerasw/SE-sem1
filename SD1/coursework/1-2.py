@@ -3,15 +3,13 @@
 # Student ID: 20223140 / w1986636         
 # Date: 19.04.2023
 
-import os
-
 # variable declaration
 continue_prog = True
 valid_marks = [0, 20, 40, 60, 80, 100, 120]
 histogram = {'Progress': 0, 'Progress (module trailer)': 0,
              'Do not progress – module retriever': 0, 'Exclude': 0}
 outcome_count = 0
-file_path = 'SD1\\coursework\\test.txt'
+results = []
 
 
 def input_prompt(level):
@@ -95,20 +93,14 @@ def history_print(outcome_count):
     print("---------------------------------------------------------------\n")
 
 
-def result_list(outcome_str, pass_marks, defer_marks, fail_marks):
-    '''Saves the input to file- output pairs in a list (Part 3).'''
+def result_list(list, outcome_str, pass_marks, defer_marks, fail_marks):
+    '''Saves the input - output pairs in a list (Part 2).'''
     result = (outcome_str, " - ", pass_marks,
               " ,", defer_marks, " ,", fail_marks)
-    with open(file_path, 'a') as f:
-        for items in result:
-            f.write(str(items))
-        f.write("\n")
+    list.append(result)
 
 
 # This is the main execution, depends on the control function.
-if os.path.exists(file_path):
-    os.remove(file_path)
-
 while continue_prog == True:
     pass_marks = input_prompt("pass")
     defer_marks = input_prompt("defer")
@@ -119,14 +111,15 @@ while continue_prog == True:
 
     if outcome_str != "Total incorrect.":
         history(outcome_str)
-        result_list(outcome_str, pass_marks, defer_marks, fail_marks)
+        result_list(results, outcome_str, pass_marks, defer_marks, fail_marks)
 
     continue_prog = control()
 
 # printing the outcome summary
-
 history_print(outcome_count)
 
-# printing results from file
-with open(file_path, 'r') as f:
-    print(f.read())
+# printing results from memory
+for items in results:
+    for text in items:
+        print(text, end="")
+    print()

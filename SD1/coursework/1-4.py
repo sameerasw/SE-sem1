@@ -1,3 +1,8 @@
+# I declare that my work contains no examples of misconduct, such as plagiarism, or collusion.    
+# Any code taken from other sources is referenced within my code solution.  
+# Student ID: 20223140 / w1986636         
+# Date: 19.04.2023
+
 # variable declaration
 continue_prog = True
 valid_marks = [0, 20, 40, 60, 80, 100, 120]
