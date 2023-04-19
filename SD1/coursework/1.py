@@ -103,8 +103,10 @@ while continue_prog == True:
 
     outcome_str = outcome(pass_marks, defer_marks, fail_marks)
     print("\n", outcome_str, "\n")
-    history(outcome_str)
-    result_list(results, outcome_str, pass_marks, defer_marks, fail_marks)
+
+    if outcome_str != "Total incorrect.":
+        history(outcome_str)
+        result_list(results, outcome_str, pass_marks, defer_marks, fail_marks)
 
     continue_prog = control()
 

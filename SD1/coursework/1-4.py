@@ -104,7 +104,7 @@ while continue_prog == True:
 
     outcome_str = outcome(pass_marks, defer_marks, fail_marks)
     print("\n", outcome_str, "\n")
-    
+
     if outcome_str != "Total incorrect.":
         history(outcome_str)
         result_list(student_id, results, outcome_str,

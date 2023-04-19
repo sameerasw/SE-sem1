@@ -18,7 +18,7 @@ def input_prompt(level):
         print(validation)
         level_input = input(prompt)
         validation = validate(level_input)
-    return(int(level_input))
+    return (int(level_input))
 
 
 def validate(marks):
@@ -33,7 +33,7 @@ def validate(marks):
             validation = "validated"
     except:
         validation = "Integer required"
-    return(validation)
+    return (validation)
 
 
 def outcome(mark1, mark2, mark3):
@@ -49,7 +49,7 @@ def outcome(mark1, mark2, mark3):
             outcome = "Progress (module trailer)"
         else:
             outcome = "Progress"
-    return(outcome)
+    return (outcome)
 
 
 def control():
@@ -67,7 +67,7 @@ def control():
     else:
         continue_prog = False
         print()
-    return(continue_prog)
+    return (continue_prog)
 
 
 def history(outcome):
@@ -111,8 +111,10 @@ while continue_prog == True:
 
     outcome_str = outcome(pass_marks, defer_marks, fail_marks)
     print("\n", outcome_str, "\n")
-    history(outcome_str)
-    result_list(outcome_str, pass_marks, defer_marks, fail_marks)
+
+    if outcome_str != "Total incorrect.":
+        history(outcome_str)
+        result_list(outcome_str, pass_marks, defer_marks, fail_marks)
 
     continue_prog = control()
 
