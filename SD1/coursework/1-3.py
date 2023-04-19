@@ -1,6 +1,6 @@
-# I declare that my work contains no examples of misconduct, such as plagiarism, or collusion.    
-# Any code taken from other sources is referenced within my code solution.  
-# Student ID: 20223140 / w1986636         
+# I declare that my work contains no examples of misconduct, such as plagiarism, or collusion.
+# Any code taken from other sources is referenced within my code solution.
+# Student ID: w1986636
 # Date: 19.04.2023
 
 import os
