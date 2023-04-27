@@ -1,5 +1,18 @@
-mydict = {"cat":6, "elephant":23, "bear":20}
+s = "Hello"
+b = 0
+try:
+    b = int(s)
+except:
+    b = -1
+print(b)
 
-answer = mydict.get("cat")
+registered = True
+if registered:
+    print("Welcome")
+else:
+    print("Please register")
 
-print(answer)
+string = '''This is a
+multi line string'''
+
+print(string)
